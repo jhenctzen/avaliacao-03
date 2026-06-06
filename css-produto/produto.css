@@ -1,0 +1,221 @@
+/* 1. IMPORTAÇÃO DAS FONTES DO GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f6;
+    color: #1c1c22; 
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Syne', sans-serif;
+    letter-spacing: -0.5px;
+    color: #1c1c22;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e1e6;
+    padding: 16px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-area h1 {
+    font-size: 29px;
+}
+
+.logo-area h1 span {
+    color: #e63946;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    font-weight: bold;
+    color: #555565;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.catalogo-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.catalogo-header h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.catalogo-header p {
+    color: #555565;
+    font-size: 16px;
+}
+
+.produtos-grid {
+    display: flex;
+    flex-direction: column; /* No telemóvel, os cards ficam um abaixo do outro */
+    gap: 24px;
+}
+
+.produto-card {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e6;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem respeite a borda arredondada do card */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produto-capa {
+    width: 100%;
+    height: 250px;
+    background-color: #e1e1e6;
+}
+
+.produto-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.produto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.produto-genero {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e63946;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.produto-info h4 {
+    font-size: 18px;
+    color: #1c1c22;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.produto-artista {
+    font-size: 15px;
+    color: #555565;
+    font-weight: 600;
+}
+
+.produto-ano {
+    font-size: 13px;
+    color: #888895;
+    margin-bottom: 12px;
+}
+
+.produto-nota {
+    font-size: 14px;
+    color: #d4a373; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: auto; 
+}
+
+.produto-nota span {
+    color: #888895;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.btn-produto {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1c1c22;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-produto:hover {
+    background-color: #e63946;
+}
+
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e1e1e6;
+    padding: 24px;
+    text-align: center;
+    color: #555565;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+footer span {
+    color: #e63946;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .produtos-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .produto-card {
+        flex: 1 1 calc(25% - 18px); 
+        min-width: 250px;
+    }
+}
