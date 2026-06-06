@@ -17,7 +17,7 @@ O design do projeto foi construído utilizando uma paleta de cores clara e moder
 
 ## 📁 Estrutura do Projeto
 
-O repositório está organizado de forma limpa, separando as responsabilidades de cada página e folha de estilo em diretórios dedicados:
+O repositório está organizado de forma limpa e otimizada. Para garantir melhor performance e um repositório leve, as capas dos álbuns são consumidas diretamente via **links externos (URLs absolutas)**, eliminando a necessidade de armazenamento local de imagens de mídia:
 
 ```text
 ├── index.html                # Página inicial com destaques e críticas recentes
@@ -27,13 +27,9 @@ O repositório está organizado de forma limpa, separando as responsabilidades d
 ├── style.css                 # Estilização global e da página inicial
 ├── icon/
 │   └── favicon.png           # Ícone oficial da aba do navegador (Tom Vermelho)
-├── img/
-│   ├── album1.jpg            # Capas dos álbuns musicais
-│   ├── album2.jpg
-│   └── ...
-├── css login/
+├── css-login/
 │   └── login.css             # Estilização do formulário de acesso
-├── css cadastro/
+├── css-cadastro/
 │   └── new.css               # Estilização do formulário de registo
-└── css produtos/
+└── css-produtos/
     └── produto.css           # Grid responsivo do catálogo de álbuns
